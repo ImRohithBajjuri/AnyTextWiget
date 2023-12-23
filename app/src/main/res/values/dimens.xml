@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="widget_margin">8dp</dimen>
+    <dimen name="subHeaderSize">18sp</dimen>
+    <dimen name="sunHeaderMarginTop">30dp</dimen>
+    <dimen name="cardCornerRadius">30dp</dimen>
+    <dimen name="cardMarginBottom">30dp</dimen>
+    <dimen name="buttonHeight">50dp</dimen>
+    <dimen name="buttonCornerRadius">15dp</dimen>
+    <dimen name="bottomSheetCorners">30dp</dimen>
+
+</resources>

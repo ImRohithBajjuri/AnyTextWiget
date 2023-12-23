@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/fontItemHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="@dimen/sunHeaderMarginTop"
+        android:fontFamily="@font/open_sans_semibold"
+        android:text="Font name"
+        android:textColor="@color/Grey2"
+        android:textSize="@dimen/subHeaderSize"
+        android:visibility="visible" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="5dp"
+        app:cardElevation="0dp"
+        app:cardCornerRadius="@dimen/cardCornerRadius"
+        android:id="@+id/fontItemCard"
+        app:cardBackgroundColor="@color/white"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/normalfontitemlayout"
+                android:background="@drawable/rippleblack"
+                >
+
+                <TextView
+                    android:id="@+id/fontitemnormalicon"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="10dp"
+                    android:fontFamily="@font/open_sans"
+                    android:gravity="center"
+                    android:text="Aa"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="30sp" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_margin = "10dp"
+                    android:layout_weight="1">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Open Sans"
+                        android:textColor="@color/Black"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/open_sans"
+                        android:layout_marginBottom="3dp"
+                        android:id="@+id/fontitemname"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:text="Open Sans"
+                        android:fontFamily="@font/roboto"
+                        android:id="@+id/fontitemnormalname"
+                        android:textColor="@color/Grey"
+                        />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_round_check_circle_24"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    app:tint="@color/green4"
+                    android:id="@+id/normalfontitemselectedbutton"
+                    android:visibility="gone"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/LightGrey"
+                android:id="@+id/fontitemdiv1"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/lightFontItemLayout"
+                android:background="@drawable/rippleblack"
+                >
+
+                <TextView
+                    android:id="@+id/fontItemLightIcon"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="10dp"
+                    android:fontFamily="@font/open_sans"
+                    android:gravity="center"
+                    android:text="Aa"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="30sp" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_margin = "10dp"
+                    android:layout_weight="1">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Open Sans light"
+                        android:textColor="@color/Black"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/open_sans"
+                        android:layout_marginBottom="3dp"
+                        android:id="@+id/lightFontItemName"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:text="Open Sans light"
+                        android:fontFamily="@font/roboto"
+                        android:id="@+id/lightFontItemNormalName"
+                        android:textColor="@color/Grey"
+                        />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_round_check_circle_24"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    app:tint="@color/green4"
+                    android:id="@+id/lightFontItemSelectedButton"
+                    android:visibility="gone"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/LightGrey"
+                android:id="@+id/fontitemdiv2"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/italicfontitemlayout"
+                android:background="@drawable/rippleblack"
+                >
+                <TextView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:text="Aa"
+                    android:textSize="30sp"
+                    android:textColor="@color/colorPrimary"
+                    android:fontFamily="@font/open_sans_italic"
+                    android:layout_gravity="center_vertical"
+                    android:textAlignment="center"
+                    android:id="@+id/fontitemitalicicon"
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:includeFontPadding="false"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Open Sans italic"
+                        android:textColor="@color/Black"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/open_sans_italic"
+                        android:layout_marginBottom="3dp"
+                        android:id="@+id/italicfontitemname"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:text="Open Sans italic"
+                        android:fontFamily="@font/roboto"
+                        android:id="@+id/italicfontitemnormalname"
+                        android:textColor="@color/Grey"
+                        />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_round_check_circle_24"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    app:tint="@color/green4"
+                    android:id="@+id/italicfontitemselectedbutton"
+                    android:visibility="gone"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/LightGrey"
+                android:id="@+id/fontitemdiv3"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:id="@+id/mediumfontitemlayout"
+                android:background="@drawable/rippleblack"
+                >
+                <TextView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:text="Aa"
+                    android:textSize="30sp"
+                    android:textColor="@color/colorPrimary"
+                    android:fontFamily="@font/open_sans_bold"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:id="@+id/fontitemmediumicon"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Open Sans semi-bold"
+                        android:textColor="@color/Black"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/open_sans_semibold"
+                        android:layout_marginBottom="5dp"
+                        android:id="@+id/mediumfontitemname"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:text="Open Sans semi-bold"
+                        android:fontFamily="@font/roboto"
+                        android:id="@+id/mediumfontitemnormalname"
+                        android:textColor="@color/Grey"
+                        />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_round_check_circle_24"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    app:tint="@color/green4"
+                    android:id="@+id/mediumfontitemselectedbutton"
+                    android:visibility="gone"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/LightGrey"
+                android:visibility="gone"
+                android:id="@+id/fontitemdiv4"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/semiboldfontitemlayout"
+                android:background="@drawable/rippleblack"
+                >
+                <TextView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:text="Aa"
+                    android:textSize="30sp"
+                    android:textColor="@color/colorPrimary"
+                    android:fontFamily="@font/open_sans_semibold"
+                    android:layout_gravity="center_vertical"
+                    android:id="@+id/fontitemsemiboldicon"
+                    android:layout_margin="10dp"
+
+                    android:gravity="center"
+                    android:textAlignment="center"
+
+                    />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_margin="10dp"
+
+                    android:layout_weight="1">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Open Sans semi-bold"
+                        android:textColor="@color/Black"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/open_sans_semibold"
+                        android:layout_marginBottom="3dp"
+                        android:id="@+id/semiboldfontitemname"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:text="Open Sans semi-bold"
+                        android:fontFamily="@font/roboto"
+                        android:id="@+id/semiboldfontitemnormalname"
+                        android:textColor="@color/Grey"
+                        />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_round_check_circle_24"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    app:tint="@color/green4"
+                    android:id="@+id/semiboldfontitemselectedbutton"
+                    android:visibility="gone"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/LightGrey"
+                android:id="@+id/fontitemdiv5"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/boldfontitemlayout"
+                android:background="@drawable/rippleblack"
+                >
+
+                <TextView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:text="Aa"
+                    android:textSize="30sp"
+                    android:textColor="@color/colorPrimary"
+                    android:fontFamily="@font/open_sans_bold"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="10dp"
+
+                    android:id="@+id/fontitemboldicon"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    />
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_margin="10dp"
+
+                    android:layout_weight="1">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Open Sans bold"
+                        android:textColor="@color/Black"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/open_sans_bold"
+                        android:layout_marginBottom="3dp"
+                        android:id="@+id/boldfontitemname"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:text="Open Sans bold"
+                        android:fontFamily="@font/roboto"
+                        android:id="@+id/boldfontitemnormalname"
+                        android:textColor="@color/Grey"
+                        />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_round_check_circle_24"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    app:tint="@color/green4"
+                    android:id="@+id/boldfontitemselectedbutton"
+                    android:visibility="gone"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/LightGrey"
+                android:id="@+id/fontitemdiv6"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/extraboldFontItemLayout"
+                android:background="@drawable/rippleblack"
+                >
+
+                <TextView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:text="Aa"
+                    android:textSize="30sp"
+                    android:textColor="@color/colorPrimary"
+                    android:fontFamily="@font/open_sans_bold"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="10dp"
+                    android:id="@+id/fontItemExtraboldIcon"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    />
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_margin="10dp"
+
+                    android:layout_weight="1">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Open Sans extrabold"
+                        android:textColor="@color/Black"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/open_sans_bold"
+                        android:layout_marginBottom="3dp"
+                        android:id="@+id/extraboldFontItemName"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:text="Open Sans extrabold"
+                        android:fontFamily="@font/roboto"
+                        android:id="@+id/extraboldFontItemNormalName"
+                        android:textColor="@color/Grey"
+                        />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_round_check_circle_24"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    app:tint="@color/green4"
+                    android:id="@+id/extraboldFontItemSelectedButton"
+                    android:visibility="gone"/>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

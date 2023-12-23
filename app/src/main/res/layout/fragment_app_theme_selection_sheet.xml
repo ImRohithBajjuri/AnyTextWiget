@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AppThemeSelectionSheet"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="15dp"
+        android:fontFamily="@font/open_sans_bold"
+        android:text="Select a theme"
+        android:textColor="@color/Black"
+        android:textSize="21sp"
+        android:id="@+id/appThemeSelectionHeader"/>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Light"
+        android:drawablePadding="15dp"
+        android:textColor="@color/Black"
+        android:textSize="18sp"
+        android:padding="15dp"
+        android:fontFamily="@font/roboto_medium"
+        android:id="@+id/lightTheme"
+        android:background="@drawable/rippleblack"
+        android:gravity="center_vertical"
+        app:drawableEndCompat="@drawable/ic_round_check_circle_24"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Dark"
+        android:drawablePadding="15dp"
+        android:textColor="@color/Black"
+        android:textSize="18sp"
+        android:padding="15dp"
+        android:fontFamily="@font/roboto_medium"
+        android:id="@+id/darkTheme"
+        android:background="@drawable/rippleblack"
+        android:gravity="center_vertical"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Follow system"
+        android:drawablePadding="15dp"
+        android:textColor="@color/Black"
+        android:textSize="18sp"
+        android:padding="15dp"
+        android:fontFamily="@font/roboto_medium"
+        android:id="@+id/systemTheme"
+        android:background="@drawable/rippleblack"
+        android:gravity="center_vertical"
+        android:visibility="gone"
+        />
+
+</LinearLayout>

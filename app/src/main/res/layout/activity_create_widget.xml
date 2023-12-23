@@ -1,0 +1,1922 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CreateWidgetActivity"
+    android:id="@+id/createwidgetparent"
+    android:background="@color/LightGrey3">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/createwidgetappbarlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:elevation="0dp"
+        >
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title="Create a new widget"
+            app:titleTextColor="@color/white"
+            android:id="@+id/createwidgettoolbar"
+            android:background="@color/colorPrimary"
+            app:navigationIcon="@drawable/ic_round_clear_for_toolbar">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_round_check_24"
+                android:layout_gravity="end|center_vertical"
+                android:padding="10dp"
+                android:background="@drawable/rippleblack"
+                android:id="@+id/savewidgetbutton"/>
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/createWidgetContentParent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+        android:background="@color/colorPrimary"
+        android:animateLayoutChanges="true"
+
+        >
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/createwidgetcardpreview"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="0dp"
+            android:outlineProvider="background"
+            app:strokeColor="@color/Black"
+            app:strokeWidth="0dp"
+            android:transitionName="mainToPreview"
+            android:theme="@style/Theme.MaterialComponents.Light"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/createwidgetappbarlayout"
+            android:nestedScrollingEnabled="true"
+            app:cardPreventCornerOverlap="true"
+            android:clipChildren="true"
+            android:animateLayoutChanges="true"
+
+            >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/previewGradientDisplay"
+                android:visibility="visible"
+                />
+
+            <FrameLayout
+                android:id="@+id/ff"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:animateLayoutChanges="true">
+
+
+                <AdapterViewFlipper
+                    android:id="@+id/createWidgetPreviewMultiImageFlipper"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone">
+
+                </AdapterViewFlipper>
+
+                <TextView
+                    android:id="@+id/previewText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:fontFamily="More Fonts..."
+                    android:gravity="center"
+                    android:rotation="0"
+                    android:text=""
+                    android:textColor="@color/Black"
+                    android:textSize="21sp" />
+
+                <Chronometer
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/previewChrono"
+                    android:layout_gravity="center"
+                    android:visibility="gone"
+                    android:textSize="21sp"
+                    />
+
+                <AnalogClock
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:id="@+id/previewAnalogClock"
+                    android:hand_hour="@drawable/circle_color_background"
+                    android:visibility="gone"
+                    />
+
+            </FrameLayout>
+        </com.google.android.material.card.MaterialCardView>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/createWidgetPreviewImageIndicator"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:animateLayoutChanges="true"
+            android:visibility="gone">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_lens_for_image_indicator"
+                android:id="@+id/indicatorOne"
+                app:tint="@color/white"
+                android:layout_marginEnd="10dp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_lens_for_image_indicator"
+                android:id="@+id/indicatorTwo"
+                app:tint="@color/LightGrey2"
+                android:layout_marginEnd="10dp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_lens_for_image_indicator"
+                android:id="@+id/indicatorThree"
+                app:tint="@color/LightGrey2"
+                android:layout_marginEnd="10dp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_lens_for_image_indicator"
+                android:id="@+id/indicatorFour"
+                app:tint="@color/LightGrey2"
+                android:layout_marginEnd="10dp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_lens_for_image_indicator"
+                android:id="@+id/indicatorFive"
+                app:tint="@color/LightGrey2"
+                android:layout_marginEnd="10dp"/>
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_round_keyboard_arrow_up_30"
+            android:layout_gravity="center_horizontal"
+            android:padding="5dp"
+            android:id="@+id/previewHeightButton"
+
+            android:layout_marginBottom="10dp"/>
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:clipToPadding="false"
+            android:scrollbarSize="0dp"
+            android:nestedScrollingEnabled="true"
+            android:background="@color/LightGrey3"
+            android:id="@+id/createWidgetInputLayoutParent"
+            android:animateLayoutChanges="true"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/createWidgetInputLayout">
+
+                <TextView
+                    android:id="@+id/widgettextinputtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="@dimen/sunHeaderMarginTop"
+                    android:fontFamily="@font/open_sans_semibold"
+                    android:text="Text"
+                    android:textColor="@color/Grey2"
+                    android:textSize="@dimen/subHeaderSize"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/createwidgetappbarlayout"
+
+                    />
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardElevation="0dp"
+                    app:cardCornerRadius="15dp"
+                    android:layout_margin="10dp"
+                    android:id="@+id/createWidgetTextTypeCard"
+                    android:visibility="gone"
+                    >
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Text"
+                        android:textColor="@color/purpleLight2"
+                        android:layout_margin="5dp"
+                        android:gravity="center_horizontal"
+                        android:textSize="16sp"
+                        android:id="@+id/txtBgrSelectionAnim"
+                        android:fontFamily="@font/open_sans_semibold"
+                        android:background="@drawable/selection_background"
+                        android:visibility="gone"
+                        />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="Input"
+                            android:textColor="@color/Grey"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginStart="5dp"
+                            android:textSize="16sp"
+                            android:id="@+id/createWidgetTextTypeInput"
+                            android:fontFamily="@font/open_sans_semibold"
+                            android:layout_weight="1"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center_horizontal"
+                            android:background="@drawable/selection_background"
+
+                            />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="Timer"
+                            android:textColor="@color/Grey"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_weight="1"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center_horizontal"
+                            android:textSize="16sp"
+                            android:id="@+id/textTypeTimer"
+                            android:fontFamily="@font/open_sans_semibold"
+                            />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="Clock"
+                            android:textColor="@color/Grey"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center_horizontal"
+                            android:layout_weight="1"
+                            android:textSize="16sp"
+                            android:id="@+id/textTypeClock"
+                            android:fontFamily="@font/open_sans_semibold"/>
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/widgettextinputcard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="@dimen/cardMarginBottom"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="0dp"
+                    >
+                   <!-- <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/createWidgetMultiTextRecy"
+                        android:nestedScrollingEnabled="true"
+                        android:visibility="gone"
+                        />-->
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:padding ="15dp"
+                        android:cursorVisible="true"
+                        android:focusableInTouchMode="true"
+                        android:fontFamily="@font/open_sans"
+                        android:hint="Add text"
+                        android:importantForAutofill="no"
+                        android:inputType="textMultiLine"
+                        android:linksClickable="false"
+                        android:textColorHint="@color/Grey"
+                        android:id="@+id/createWidgetInputText"/>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/textTimerCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="@dimen/cardMarginBottom"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="@dimen/cardCornerRadius"
+                    app:cardElevation="0dp"
+                    android:visibility="gone"
+                    >
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:id="@+id/textTimerInfoLay"
+                            >
+
+                            <ImageView
+                                android:id="@+id/textTimerInfoImg"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_margin="10dp"
+                                android:src="@drawable/timer_30dp"
+                                android:background="@drawable/circle_color_background"
+                                android:backgroundTint="@android:color/transparent"
+                                app:tint="@color/Black" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="5dp"
+                                android:fontFamily="@font/roboto"
+                                android:text="Timer will end at..."
+                                android:textColor="@color/Black"
+                                android:textSize="18sp"
+                                android:layout_gravity="center"
+                                android:id="@+id/textTimerInfoTxt"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:id="@+id/textTimerDateLay"
+                            >
+
+                            <ImageView
+                                android:id="@+id/textTimerDateImg"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_margin="10dp"
+                                android:src="@drawable/calendar_50dp"
+                                android:background="@drawable/circle_color_background"
+                                android:backgroundTint="@android:color/transparent"
+                                app:tint="@color/Black" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="5dp"
+                                    android:fontFamily="@font/roboto"
+                                    android:text="Set the date to end"
+                                    android:textColor="@color/Black"
+                                    android:textSize="18sp"
+                                    android:id="@+id/textTimerDateTxt"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/roboto"
+                                    android:text="Date"
+                                    android:textSize="16sp"
+                                    android:textColor="@color/Grey"
+                                    android:id="@+id/textTimerDate"/>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:id="@+id/textTimerTimeLay"
+                            >
+
+                            <ImageView
+                                android:id="@+id/textTimerTimeImg"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_margin="10dp"
+                                android:src="@drawable/schedule_50dp"
+                                android:background="@drawable/circle_color_background"
+                                android:backgroundTint="@android:color/transparent"
+                                app:tint="@color/Black" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="5dp"
+                                    android:fontFamily="@font/roboto"
+                                    android:text="Set the time to end"
+                                    android:textColor="@color/Black"
+                                    android:textSize="18sp"
+                                    android:id="@+id/textTimerTimeTxt"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/roboto"
+                                    android:text="Time"
+                                    android:textSize="16sp"
+                                    android:textColor="@color/Grey"
+                                    android:id="@+id/textTimerTime"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/textClockCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="@dimen/cardMarginBottom"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="@dimen/cardCornerRadius"
+                    app:cardElevation="0dp"
+                    android:visibility="gone"
+                    >
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:id="@+id/textClockLay"
+                            >
+
+                            <ImageView
+                                android:id="@+id/textClockImg"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_margin="10dp"
+                                android:src="@drawable/time_zone_50dp"
+                                android:background="@drawable/circle_color_background"
+                                android:backgroundTint="@android:color/transparent"
+                                app:tint="@color/Black" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="5dp"
+                                    android:fontFamily="@font/roboto"
+                                    android:text="Set the clock time zone"
+                                    android:textColor="@color/Black"
+                                    android:textSize="18sp"
+                                    android:id="@+id/textClockTZTxt"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/roboto"
+                                    android:text="time zone"
+                                    android:textSize="16sp"
+                                    android:textColor="@color/Grey"
+                                    android:id="@+id/textClockTZ"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:id="@+id/textClockTypeLay"
+                            >
+
+                            <ImageView
+                                android:id="@+id/textClockTypeImg"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_margin="10dp"
+                                android:src="@drawable/time_zone_50dp"
+                                android:background="@drawable/circle_color_background"
+                                android:backgroundTint="@android:color/transparent"
+                                app:tint="@color/Black" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="5dp"
+                                    android:fontFamily="@font/roboto"
+                                    android:text="Set the clock type"
+                                    android:textColor="@color/Black"
+                                    android:textSize="18sp"
+                                    android:id="@+id/textClockTypeTxt"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/roboto"
+                                    android:text="analog"
+                                    android:textSize="16sp"
+                                    android:textColor="@color/Grey"
+                                    android:id="@+id/textClockType"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+                </androidx.cardview.widget.CardView>
+
+
+                <TextView
+                    android:id="@+id/widgettextcolortitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="@dimen/sunHeaderMarginTop"
+                    android:fontFamily="@font/open_sans_semibold"
+                    android:text="@string/textColorHeader"
+                    android:textColor="@color/Grey2"
+                    android:textSize="@dimen/subHeaderSize"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/widgettextinputcard" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/widgettextcolorcard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="@dimen/cardMarginBottom"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="@dimen/cardCornerRadius"
+                    app:cardElevation="0dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/widgettextcolortitle">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/widgettextcolorimage"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                           android:layout_margin="10dp"
+                            android:src="@drawable/ic_round_lens_24"
+                            android:background="@drawable/circle_color_background"
+                            android:backgroundTint="@android:color/transparent"
+                            app:tint="@color/Black" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="5dp"
+                                android:fontFamily="@font/roboto"
+                                android:text="@string/textColorSelectionText"
+                                android:textColor="@color/Black"
+                                android:textSize="18sp"
+                                android:id="@+id/widgetSelectColorText"/>
+
+                            <TextView
+                                android:id="@+id/widgettextcolorname"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto"
+                                android:text="Black"
+                                android:textSize="16sp"
+                                android:textColor="@color/Grey"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/widgettextsizetitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="@dimen/sunHeaderMarginTop"
+                    android:fontFamily="@font/open_sans_semibold"
+                    android:text="Text size"
+                    android:textColor="@color/Grey2"
+                    android:textSize="@dimen/subHeaderSize"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/widgettextcolorcard" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/widgettextsizecard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="@dimen/cardMarginBottom"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="@dimen/cardCornerRadius"
+                    app:cardElevation="0dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/widgettextsizetitle">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="10dp"
+                            android:src="@drawable/ic_round_format_size_24"
+                            android:visibility="visible"
+                            android:id="@+id/widgetSetTextSizeImage"
+                            android:elevation="50dp"
+                            />
+
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="10dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="5dp"
+                                android:fontFamily="@font/roboto"
+                                android:text="Set the text size"
+                                android:textColor="@color/Black"
+                                android:textSize="18sp"
+                                android:id="@+id/widgetSetTextSizeText"/>
+
+                            <androidx.appcompat.widget.AppCompatSeekBar
+                                android:id="@+id/widgettextsizeseekbar"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="-5dp"
+                                android:max="100"
+                                android:progress="21"
+                                android:progressBackgroundTint="@color/Grey"/>
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/widgettextsize"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:paddingEnd="10dp"
+                            android:paddingStart="10dp"
+                            android:text="21"
+                            android:gravity="center"
+                            android:textColor="@color/Grey"
+                            android:background="@drawable/rippleblack"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/widgettextstyletitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="@dimen/sunHeaderMarginTop"
+                    android:fontFamily="@font/open_sans_semibold"
+                    android:text="Text style"
+                    android:textColor="@color/Grey2"
+                    android:textSize="@dimen/subHeaderSize"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/widgettextsizecard" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/widgettextstylecard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="@dimen/cardMarginBottom"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="@dimen/cardCornerRadius"
+                    app:cardElevation="0dp"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:text="Aa"
+                            android:textSize="30sp"
+                            android:textColor="@color/darkGrey"
+                            android:fontFamily="@font/open_sans_bold"
+                            android:layout_gravity="center_vertical"
+                            android:layout_margin="10dp"
+                            android:gravity="center"
+                            android:textAlignment="center"
+                            android:id="@+id/widgettextfonticon"/>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="5dp"
+                                android:fontFamily="@font/roboto"
+                                android:text="Select a font"
+                                android:textColor="@color/Black"
+                                android:textSize="18sp"
+                                android:id="@+id/widgetSelectFontText"/>
+
+                            <TextView
+                                android:id="@+id/widgettextstylename"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto"
+                                android:text="Open Sans semi-bold"
+                                android:textSize="16sp"
+                                android:textColor="@color/Grey"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+
+                <TextView
+                    android:id="@+id/widgetTextGravityTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="@dimen/sunHeaderMarginTop"
+                    android:fontFamily="@font/open_sans_semibold"
+                    android:text="Text gravity"
+                    android:textColor="@color/Grey2"
+                    android:textSize="@dimen/subHeaderSize"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/widgettextstylecard"
+                    />
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/widgetTextGravityCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="@dimen/cardMarginBottom"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="@dimen/cardCornerRadius"
+                    app:cardElevation="0dp"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:background="@drawable/rippleblack"
+                            android:id="@+id/widgetVerticalTextGravityLayout">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_margin="10dp"
+                                android:src="@drawable/ic_round_vertical_align_center_50"
+                                android:id="@+id/widgetTextVerticalGravityImage"/>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="5dp"
+                                    android:fontFamily="@font/roboto"
+                                    android:text="Set vertical gravity"
+                                    android:textColor="@color/Black"
+                                    android:textSize="18sp"
+                                    android:id="@+id/widgetSetVerticalGravityText"/>
+
+                                <TextView
+                                    android:id="@+id/widgetTextVerticalGravityName"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/roboto"
+                                    android:text="center"
+                                    android:textSize="16sp"
+                                    android:textColor="@color/Grey"/>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/LightGrey3"
+                            android:id="@+id/widgetTextGravityDiv"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:background="@drawable/rippleblack"
+                            android:id="@+id/widgetHorizontalTextGravityLayout">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_margin="10dp"
+                                android:src="@drawable/ic_round_vertical_align_center_50"
+                                android:id="@+id/widgetTextHorizontalGravityImage"
+                                android:rotation="90"/>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="5dp"
+                                    android:fontFamily="@font/roboto"
+                                    android:text="Set Horizontal gravity"
+                                    android:textColor="@color/Black"
+                                    android:textSize="18sp"
+                                    android:id="@+id/widgetSetHorizontalGravityText"/>
+
+                                <TextView
+                                    android:id="@+id/widgetTextHorizontalGravityName"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/roboto"
+                                    android:text="center"
+                                    android:textSize="16sp"
+                                    android:textColor="@color/Grey"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+
+                <TextView
+                    android:id="@+id/widgetTextShadowTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="@dimen/sunHeaderMarginTop"
+                    android:fontFamily="@font/open_sans_semibold"
+                    android:text="Text shadow"
+                    android:textColor="@color/Grey2"
+                    android:textSize="@dimen/subHeaderSize"
+                    />
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/textShadowCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="@dimen/cardMarginBottom"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="@dimen/cardCornerRadius"
+                    app:cardElevation="0dp"
+                    >
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:text="Aa"
+                            android:textSize="30sp"
+                            android:textColor="@color/colorPrimary"
+                            android:fontFamily="@font/open_sans_bold"
+                            android:layout_gravity="center_vertical"
+                            android:layout_margin="10dp"
+                            android:gravity="center"
+                            android:textAlignment="center"
+                            android:shadowRadius="20"
+                            android:shadowColor="@color/purpleLight"
+                            android:id="@+id/textShadowIcon"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toTopOf="@id/textShadowDiv2"
+                            app:layout_constraintStart_toStartOf="parent"/>
+                        <androidx.appcompat.widget.SwitchCompat
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:text="Enable text shadow"
+                            android:textColor="@color/Black"
+                            android:textSize="18sp"
+                            android:layout_gravity="center_vertical"
+                            android:id="@+id/textShadowSwitch"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginEnd="15dp"
+                            android:layout_marginTop="5dp"
+                            android:checked="false"
+                            android:gravity="center_vertical"
+                            app:layout_constraintStart_toEndOf="@id/textShadowIcon"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toTopOf="@id/textShadowDiv2"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            />
+
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/LightGrey3"
+                            android:id="@+id/textShadowDiv2"
+                            app:layout_constraintBottom_toTopOf="@id/textShadowRadiusIcon"
+                            android:layout_marginBottom="10dp"/>
+
+
+                        <TextView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:text="5"
+                            android:textSize="30sp"
+                            android:textColor="@color/colorPrimary"
+                            android:fontFamily="@font/open_sans_bold"
+                            android:layout_gravity="center_vertical"
+                            android:layout_margin="10dp"
+                            android:gravity="center"
+                            android:textAlignment="center"
+                            android:id="@+id/textShadowRadiusIcon"
+                            app:layout_constraintBottom_toTopOf="@id/textShadowDiv4"
+                            app:layout_constraintStart_toStartOf="parent"
+                            />
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            app:layout_constraintStart_toEndOf="@id/textShadowRadiusIcon"
+                            app:layout_constraintBottom_toTopOf="@id/textShadowDiv4"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="5dp"
+                                android:fontFamily="@font/roboto"
+                                android:text="Set shadow radius"
+                                android:textColor="@color/Black"
+                                android:textSize="18sp"
+                                android:id="@+id/textShadowRadiusText"/>
+
+                            <androidx.appcompat.widget.AppCompatSeekBar
+                                android:id="@+id/textShadowRadiusSeekBar"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="-5dp"
+                                android:layout_marginEnd="20dp"
+                                android:max="10"
+                                android:progress="5"
+                                android:progressBackgroundTint="@color/Grey"/>
+                        </LinearLayout>
+
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/LightGrey3"
+                            android:id="@+id/textShadowDiv4"
+                            app:layout_constraintBottom_toTopOf="@id/textShadowHDirIcon"
+                            android:layout_marginBottom="10dp"/>
+
+
+                        <TextView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:text="1"
+                            android:textSize="30sp"
+                            android:textColor="@color/colorPrimary"
+                            android:fontFamily="@font/open_sans_bold"
+                            android:layout_gravity="center_vertical"
+                            android:layout_margin="10dp"
+                            android:gravity="center"
+                            android:textAlignment="center"
+                            android:id="@+id/textShadowHDirIcon"
+                            app:layout_constraintBottom_toTopOf="@id/textShadowDiv"
+                            app:layout_constraintStart_toStartOf="parent"
+                            />
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            app:layout_constraintStart_toEndOf="@id/textShadowHDirIcon"
+                            app:layout_constraintBottom_toTopOf="@id/textShadowDiv"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="5dp"
+                                android:fontFamily="@font/roboto"
+                                android:text="Set horizontal direction"
+                                android:textColor="@color/Black"
+                                android:textSize="18sp"
+                                android:id="@+id/textShadowHDirText"/>
+
+                            <androidx.appcompat.widget.AppCompatSeekBar
+                                android:id="@+id/textShadowHDirSeekBar"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="-5dp"
+                                android:layout_marginEnd="20dp"
+                                android:max="20"
+                                android:progress="1"
+                                android:progressBackgroundTint="@color/Grey"/>
+                        </LinearLayout>
+
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/LightGrey3"
+                            android:id="@+id/textShadowDiv"
+                            app:layout_constraintBottom_toTopOf="@id/textShadowVDirIcon"
+                            android:layout_marginBottom="10dp"/>
+
+
+
+                        <TextView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:text="1"
+                            android:textSize="30sp"
+                            android:textColor="@color/colorPrimary"
+                            android:fontFamily="@font/open_sans_bold"
+                            android:layout_gravity="center_vertical"
+                            android:layout_margin="10dp"
+                            android:gravity="center"
+                            android:textAlignment="center"
+                            android:id="@+id/textShadowVDirIcon"
+                            app:layout_constraintBottom_toTopOf="@id/textShadowDiv3"
+                            app:layout_constraintStart_toStartOf="parent"
+                            />
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            app:layout_constraintStart_toEndOf="@id/textShadowVDirIcon"
+                            app:layout_constraintBottom_toTopOf="@id/textShadowDiv3"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="5dp"
+                                android:fontFamily="@font/roboto"
+                                android:text="Set Vertical direction"
+                                android:textColor="@color/Black"
+                                android:textSize="18sp"
+                                android:id="@+id/textShadowVDirText"/>
+
+                            <androidx.appcompat.widget.AppCompatSeekBar
+                                android:id="@+id/textShadowVDirSeekBar"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="-5dp"
+                                android:layout_marginEnd="20dp"
+                                android:max="20"
+                                android:progress="1"
+                                android:progressBackgroundTint="@color/Grey"/>
+                        </LinearLayout>
+
+
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/LightGrey3"
+                            android:id="@+id/textShadowDiv3"
+                            app:layout_constraintBottom_toTopOf="@id/textShadowColorImg"
+                            android:layout_marginBottom="10dp"/>
+
+
+
+                        <ImageView
+                            android:id="@+id/textShadowColorImg"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="10dp"
+                            android:src="@drawable/ic_round_lens_24"
+                            android:background="@drawable/circle_color_background"
+                            android:backgroundTint="@android:color/transparent"
+                            app:tint="@color/Black"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            />
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:orientation="vertical"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/textShadowColorImg"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            android:id="@+id/textShadowColorInfo"
+                            >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="5dp"
+                                android:fontFamily="@font/roboto"
+                                android:text="@string/textColorSelectionText"
+                                android:textColor="@color/Black"
+                                android:textSize="18sp"
+                                android:id="@+id/textShadowSelectColorText"/>
+
+                            <TextView
+                                android:id="@+id/textShadowColorName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto"
+                                android:text="Black"
+                                android:textSize="16sp"
+                                android:textColor="@color/Grey"/>
+                        </LinearLayout>
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/widgettextpaddingtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="@dimen/sunHeaderMarginTop"
+                    android:fontFamily="@font/open_sans_semibold"
+                    android:text="Text padding"
+                    android:textColor="@color/Grey2"
+                    android:textSize="@dimen/subHeaderSize"
+                    android:visibility="gone"
+                  />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/widgettextpaddingcard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="@dimen/cardMarginBottom"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="@dimen/cardCornerRadius"
+                    app:cardElevation="0dp"
+                    android:visibility="gone"
+                   >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="10dp"
+                            android:src="@drawable/padding_black_50dp"
+                            android:visibility="visible"
+                            android:id="@+id/widgetSetTextPaddingImage"
+                            android:elevation="50dp"
+                            />
+
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="10dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="5dp"
+                                android:fontFamily="@font/roboto"
+                                android:text="Set the text padding"
+                                android:textColor="@color/Black"
+                                android:textSize="18sp"
+                                android:id="@+id/widgetSetTextPaddingText"
+                                />
+
+                            <androidx.appcompat.widget.AppCompatSeekBar
+                                android:id="@+id/widgettextpaddingseekbar"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="-5dp"
+                                android:max="100"
+                                android:progress="0"
+                                android:progressBackgroundTint="@color/Grey"/>
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/widgettextpadding"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:paddingEnd="10dp"
+                            android:paddingStart="10dp"
+                            android:text="0"
+                            android:gravity="center"
+                            android:textColor="@color/Grey"
+                            android:background="@drawable/rippleblack"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/widgetbackgroundtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/open_sans_semibold"
+                    android:text="Widget background"
+                    android:textColor="@color/Grey2"
+                    android:textSize="@dimen/subHeaderSize"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="@dimen/sunHeaderMarginTop"/>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardElevation="0dp"
+                    app:cardCornerRadius="15dp"
+                    android:layout_margin="10dp"
+                    android:id="@+id/widgetBackgroundSelectionCard"
+                    >
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Gradient"
+                        android:textColor="@color/purpleLight2"
+                        android:layout_margin="5dp"
+                        android:gravity="center_horizontal"
+                        android:textSize="16sp"
+                        android:id="@+id/bgrSelectionAnim"
+                        android:fontFamily="@font/open_sans_semibold"
+                        android:background="@drawable/selection_background"
+                        android:visibility="gone"
+                        />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="Solid"
+                            android:textColor="@color/Grey"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginStart="5dp"
+                            android:textSize="16sp"
+                            android:id="@+id/widgetbackgroundcolorselection"
+                            android:fontFamily="@font/open_sans_semibold"
+                            android:layout_weight="1"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center_horizontal"
+                            android:background="@drawable/selection_background"
+
+                            />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="Gradient"
+                            android:textColor="@color/Grey"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_weight="1"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center_horizontal"
+                            android:textSize="16sp"
+                            android:id="@+id/gradientSelection"
+                            android:fontFamily="@font/open_sans_semibold"
+                            />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="Image"
+                            android:textColor="@color/Grey"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center_horizontal"
+                            android:layout_weight="1"
+                            android:textSize="16sp"
+                            android:id="@+id/widgetbackgroundimageselection"
+                            android:fontFamily="@font/open_sans_semibold"/>
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/widgetbackgroundlayout">
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/widgetbackgroundcolorcard"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="@dimen/cardMarginBottom"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="@dimen/cardCornerRadius"
+                        app:cardElevation="0dp"
+                        >
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                           >
+
+                            <ImageView
+                                android:id="@+id/widgetbackgroundcolorimage"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_margin="10dp"
+                                android:src="@drawable/ic_round_lens_24"
+                                android:background="@drawable/circle_color_background"
+                                android:backgroundTint="@color/white"
+                                app:tint="@color/white" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="5dp"
+                                    android:fontFamily="@font/roboto"
+                                    android:text="@string/textColorSelectionText"
+                                    android:textColor="@color/Black"
+                                    android:textSize="18sp"
+                                    android:id="@+id/widgetBackgroundColorText"/>
+
+                                <TextView
+                                    android:id="@+id/widgetbackgroundcolorname"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/roboto"
+                                    android:text="White"
+                                    android:textSize="16sp"
+                                    android:textColor="@color/Grey"/>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/widgetGradientBackgroundCard"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="@dimen/cardMarginBottom"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="@dimen/cardCornerRadius"
+                        app:cardElevation="0dp"
+                        android:visibility="gone"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/gradientBackgroundImage"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_gravity="center"
+                                android:layout_margin="10dp"
+                                android:src="@drawable/gradient_purple_green"
+                                 />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="5dp"
+                                    android:fontFamily="@font/roboto"
+                                    android:text="Select a gradient"
+                                    android:textColor="@color/Black"
+                                    android:textSize="18sp"
+                                    android:id="@+id/gradientBackgroundText"/>
+
+                                <TextView
+                                    android:id="@+id/gradientBackgroundName"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/roboto"
+                                    android:text="Gradient name"
+                                    android:textSize="16sp"
+                                    android:textColor="@color/Grey"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="10dp"
+                        android:visibility="gone"
+                        android:id="@+id/widgetbackgroundimageselectionlayout"
+                        android:orientation="vertical"
+                        >
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            app:cardCornerRadius="20dp"
+                            app:cardElevation="0dp"
+                            android:theme="@style/Theme.MaterialComponents.Light"
+                            android:id="@+id/widgetbackgroundimagecard">
+                            <AdapterViewFlipper
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:id="@+id/widgetBackgroundImageFlipper"/>
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="18sp"
+                            android:text="Click on the image to see other added images"
+                            android:textColor="@color/white"
+                            android:id="@+id/widgetMultiImageHelperText"
+                            android:padding="10dp"
+                            android:visibility="gone"
+                            android:background="@drawable/snackbar_background"
+                            android:layout_marginTop="10dp"
+
+                            />
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/buttonHeight"
+                            android:id="@+id/widgetbackgroundaddimagebutton"
+                            app:cardElevation="0dp"
+                            app:cardCornerRadius="@dimen/buttonCornerRadius"
+                            app:cardBackgroundColor="@color/green4"
+                            android:clickable="false"
+                            android:focusable="false"
+                            android:layout_margin="10dp"
+                            >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Add image"
+                                style="@style/TextAppearance.AppCompat.Widget.Button"
+                                android:layout_gravity="center"
+                                android:textColor="@color/white"
+                                android:drawableStart="@drawable/ic_round_add_circle_24"
+                                android:gravity="center"
+                                android:drawablePadding="5dp"
+                                />
+
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
+                </FrameLayout>
+
+
+
+                <TextView
+                    android:id="@+id/widgetOutlineTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="@dimen/sunHeaderMarginTop"
+                    android:fontFamily="@font/open_sans_semibold"
+                    android:text="Widget outline"
+                    android:textColor="@color/Grey2"
+                    android:textSize="@dimen/subHeaderSize" />
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/widgetOutlineCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="@dimen/cardMarginBottom"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="@dimen/cardCornerRadius"
+                    app:cardElevation="0dp"
+                    >
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <View
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:background="@drawable/outline_icon_50"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toTopOf="@id/widgetOutlineDiv2"
+                            app:layout_constraintStart_toStartOf="parent"
+                            android:layout_margin="10dp"
+                            android:id="@+id/widgetOutlineIcon"
+                            />
+                        <androidx.appcompat.widget.SwitchCompat
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:text="Enable widget outline"
+                            android:textColor="@color/Black"
+                            android:textSize="18sp"
+                            android:layout_gravity="center_vertical"
+                            android:id="@+id/widgetOutlineSwitch"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginEnd="15dp"
+                            android:layout_marginTop="5dp"
+                            android:checked="false"
+                            android:gravity="center_vertical"
+                            app:layout_constraintStart_toEndOf="@id/widgetOutlineIcon"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toTopOf="@id/widgetOutlineDiv2"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/LightGrey3"
+                            android:id="@+id/widgetOutlineDiv2"
+                            app:layout_constraintBottom_toTopOf="@id/widgetOutlineWidthIcon"
+                            android:layout_marginBottom="10dp"/>
+
+
+                        <TextView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:text="3"
+                            android:textSize="30sp"
+                            android:textColor="@color/colorPrimary"
+                            android:fontFamily="@font/open_sans_bold"
+                            android:layout_gravity="center_vertical"
+                            android:background="@drawable/outline_icon_50"
+                            android:layout_margin="10dp"
+                            android:gravity="center"
+                            android:textAlignment="center"
+                            android:id="@+id/widgetOutlineWidthIcon"
+                            app:layout_constraintBottom_toTopOf="@id/widgetOutlineDiv"
+                            app:layout_constraintStart_toStartOf="parent"
+                            />
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            app:layout_constraintStart_toEndOf="@id/widgetOutlineWidthIcon"
+                            app:layout_constraintBottom_toTopOf="@id/widgetOutlineDiv"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="5dp"
+                                android:fontFamily="@font/roboto"
+                                android:text="Set the outline width"
+                                android:textColor="@color/Black"
+                                android:textSize="18sp"
+                                android:id="@+id/widgetOutlineWidthText"/>
+
+                            <androidx.appcompat.widget.AppCompatSeekBar
+                                android:id="@+id/widgetOutlineWidthSeekBar"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="-5dp"
+                                android:layout_marginEnd="20dp"
+                                android:max="10"
+                                android:progress="3"
+                                android:progressBackgroundTint="@color/Grey"/>
+                        </LinearLayout>
+
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/LightGrey3"
+                            android:id="@+id/widgetOutlineDiv"
+                            app:layout_constraintBottom_toTopOf="@id/widgetOutlineColorImage"
+                            android:layout_marginBottom="10dp"/>
+
+                        <ImageView
+                            android:id="@+id/widgetOutlineColorImage"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="10dp"
+                            android:src="@drawable/ic_round_lens_24"
+                            android:background="@drawable/circle_color_background"
+                            android:backgroundTint="@android:color/transparent"
+                            app:tint="@color/Black"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            />
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:orientation="vertical"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/widgetOutlineColorImage"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            android:id="@+id/widgetOutlineColorInfo"
+                            >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="5dp"
+                                android:fontFamily="@font/roboto"
+                                android:text="@string/textColorSelectionText"
+                                android:textColor="@color/Black"
+                                android:textSize="18sp"
+                                android:id="@+id/widgetSelectOutlineColorText"/>
+
+                            <TextView
+                                android:id="@+id/widgetOutlineColorName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto"
+                                android:text="Black"
+                                android:textSize="16sp"
+                                android:textColor="@color/Grey"/>
+                        </LinearLayout>
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+
+                <TextView
+                    android:id="@+id/widgetClickActionTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="@dimen/sunHeaderMarginTop"
+                    android:fontFamily="@font/open_sans_semibold"
+                    android:text="Click action"
+                    android:textColor="@color/Grey2"
+                    android:textSize="@dimen/subHeaderSize" />
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/widgetClickActionCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="@dimen/cardMarginBottom"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="@dimen/cardCornerRadius"
+                    app:cardElevation="0dp"
+                  >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/widgetClickActionImage"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+                            android:layout_margin="10dp"
+                            android:src="@drawable/ic_round_touch_app"
+                            android:background="@drawable/circle_color_background"
+                            android:backgroundTint="@android:color/transparent"
+                            />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="5dp"
+                                android:fontFamily="@font/roboto"
+                                android:text="Set a click action"
+                                android:textColor="@color/Black"
+                                android:textSize="18sp"
+                                android:id="@+id/widgetClickActionText"/>
+
+                            <TextView
+                                android:id="@+id/widgetClickActionName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto"
+                                android:text="Opens an App"
+                                android:textSize="16sp"
+                                android:textColor="@color/Grey"
+                                android:ellipsize="marquee"
+                                android:marqueeRepeatLimit="marquee_forever"
+                                android:singleLine="true" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+
+                <TextView
+                    android:id="@+id/widgetotherstitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="@dimen/sunHeaderMarginTop"
+                    android:fontFamily="@font/open_sans_semibold"
+                    android:text="Others"
+                    android:textColor="@color/Grey2"
+                    android:textSize="@dimen/subHeaderSize"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/widgetbackgroundlayout" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="@dimen/cardMarginBottom"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="@dimen/cardCornerRadius"
+                    app:cardElevation="0dp"
+                    android:id="@+id/widgetroundcornerscard">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_round_rounded_corner_24"
+                            android:layout_margin="10dp"
+                            android:layout_gravity="center_vertical"
+                            android:id="@+id/widgetRoundCornersImage"
+                            />
+
+                        <androidx.appcompat.widget.SwitchCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Enable widget rounded corners"
+                            android:textColor="@color/Black"
+                            android:textSize="18sp"
+                            android:layout_gravity="center_vertical"
+                            android:id="@+id/widgetroundcornersswitch"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginEnd="15dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:checked="true"
+                            />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

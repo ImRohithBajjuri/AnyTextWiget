@@ -1,0 +1,173 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/green4</item>
+        <item name="dialogTheme">@style/CustomDialogTheme</item>
+        <item name="alertDialogTheme">@style/CustomDialogTheme</item>
+        <item name="android:alertDialogStyle">@style/CustomDialogTheme</item>
+        <item name="snackbarStyle">@style/customSnackbarStyle</item>
+    </style>
+
+    <style name="AppThemeDark" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/green4Dark</item>
+        <item name="dialogTheme">@style/CustomDialogThemeDark</item>
+        <item name="alertDialogTheme">@style/CustomDialogThemeDark</item>
+        <item name="android:alertDialogStyle">@style/CustomDialogThemeDark</item>
+        <item name="snackbarStyle">@style/customSnackbarStyle</item>
+    </style>
+
+
+    <style name="bottomSheetAnim" parent="Animation.Design.BottomSheetDialog">
+        <item name="android:windowEnterAnimation">@anim/slideup</item>
+        <item name="android:windowExitAnimation">@anim/slidedown</item>
+        <item name="android:shareInterpolator">true</item>
+        <item name="android:animateLayoutChanges">true</item>
+    </style>
+
+
+    <style name="bottomSheetModal" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/bottomsheetshape</item>
+    </style>
+    <style name="noCornersBottomSheetModal" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/no_corners_bottomsheetshape</item>
+    </style>
+
+    <style name="bottomSheetModalDark" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/bottom_sheet_shape_dark</item>
+    </style>
+    <style name="noCornersBottomSheetModalDark" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/no_corners_bottom_sheet_shape_dark</item>
+    </style>
+
+
+
+    <style name="bottomSheetDialogStyle" parent="Theme.MaterialComponents.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/bottomSheetModal</item>
+        <item name="android:windowAnimationStyle">@style/bottomSheetAnim</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+    <style name="noCornersBottomSheetDialogStyle" parent="Theme.MaterialComponents.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/noCornersBottomSheetModal</item>
+        <item name="android:windowAnimationStyle">@style/bottomSheetAnim</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+
+    <style name="bottomSheetDialogStyleForFontsSheet" parent="Theme.MaterialComponents.BottomSheetDialog">
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="bottomSheetStyle">@style/bottomSheetModal</item>
+        <item name="android:windowAnimationStyle">@style/bottomSheetAnim</item>
+    </style>
+    <style name="noCornersBottomSheetDialogStyleForFontsSheet" parent="Theme.MaterialComponents.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/noCornersBottomSheetModal</item>
+        <item name="android:windowAnimationStyle">@style/bottomSheetAnim</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+
+    </style>
+
+
+
+    <style name="bottomSheetDialogStyleDark" parent="Theme.MaterialComponents.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/bottomSheetModalDark</item>
+        <item name="android:windowAnimationStyle">@style/bottomSheetAnim</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+    <style name="noCornersBottomSheetDialogStyleDark" parent="Theme.MaterialComponents.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/noCornersBottomSheetModalDark</item>
+        <item name="android:windowAnimationStyle">@style/bottomSheetAnim</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+
+    <style name="bottomSheetDialogStyleForFontsSheetDark" parent="Theme.MaterialComponents.BottomSheetDialog">
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="bottomSheetStyle">@style/bottomSheetModalDark</item>
+        <item name="android:windowAnimationStyle">@style/bottomSheetAnim</item>
+    </style>
+    <style name="noCornersBottomSheetDialogStyleForFontsSheetDark" parent="Theme.MaterialComponents.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/noCornersBottomSheetModalDark</item>
+        <item name="android:windowAnimationStyle">@style/bottomSheetAnim</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+
+    </style>
+
+
+    <style name="CustomDialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:colorAccent">@color/colorPrimary</item>
+        <item name="android:backgroundTint">@color/white</item>
+        <item name="dialogCornerRadius">30dp</item>
+        <item name="android:background">@color/white</item>
+        <item name="colorAccent">@color/colorPrimary</item>
+        <item name="android:inAnimation">@anim/zoom_in</item>
+        <item name="android:outAnimation">@anim/zoom_out</item>
+        <item name="android:windowAnimationStyle">@style/CustomDialogAnimation</item>
+    </style>
+
+    <style name="CustomDialogThemeDark" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:colorAccent">@color/violetDark</item>
+        <item name="colorAccent">@color/violetDark</item>
+
+        <item name="android:backgroundTint">@color/darkGrey</item>
+        <item name="dialogCornerRadius">30dp</item>
+        <item name="android:background">@color/darkGrey</item>
+
+        <item name="android:textColorPrimary">@color/white</item>
+
+        <item name="android:colorControlNormal">@color/white</item>
+        <item name="textColorAlertDialogListItem">@color/white</item>
+
+        <item name="android:windowAnimationStyle">@style/CustomDialogAnimation</item>
+
+    </style>
+
+    <style name="CustomDialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/zoom_in</item>
+        <item name="android:windowExitAnimation">@anim/zoom_out</item>
+    </style>
+
+    <style name="widgetUIImageShape" parent="ShapeAppearance.MaterialComponents.LargeComponent">
+        <item name="cornerRadius">15dp</item>
+        <item name="cornerFamily">rounded</item>
+    </style>
+
+    <style name="customSnackbarStyle" parent="Widget.Design.Snackbar">
+        <item name="android:layout_margin">15dp</item>
+        <item name="android:radius">10dp</item>
+    </style>
+
+    <style name="collapsingToolbarStyle" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="colorControlNormal">@color/colorPrimary</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+    </style>
+
+    <style name="popupMenuStyleDark" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:colorBackground">@color/darkGrey</item>
+    </style>
+
+    <style name="popupMenuStyleLight" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:textColor">@color/Black</item>
+        <item name="android:colorBackground">@color/white</item>
+    </style>
+
+    <style name="splashScreenStyle" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash_screen</item>
+        <item name="android:statusBarColor">@color/colorPrimaryDark</item>
+        <item name="android:navigationBarColor">@color/colorPrimaryDark</item>
+    </style>
+
+</resources>

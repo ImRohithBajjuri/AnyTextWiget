@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ShowSavedWidgets"
+    android:background="@color/LightGrey3"
+    android:orientation="vertical"
+    android:id="@+id/showSavedWidgetsParent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/selectwidgetappbarlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title="Select a widget"
+            app:titleTextColor="@color/white"
+            android:background="@color/colorPrimary"
+            android:id="@+id/showSavedWidgetsToolbar"/>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="No widgets"
+        android:textSize="21sp"
+        android:textColor="@color/Grey"
+        android:fontFamily="@font/open_sans_semibold"
+        android:layout_margin="10dp"
+        android:drawableTop="@drawable/ic_round_delete_for_show_saved_widgets"
+        android:id="@+id/nowidgetsplaceholderinshowsavedwidgets"
+        android:visibility="gone"
+
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/selectwidgetrecy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:clipToPadding="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/selectwidgetappbarlayout"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+        />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

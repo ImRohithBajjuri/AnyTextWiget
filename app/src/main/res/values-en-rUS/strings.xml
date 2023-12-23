@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="colorPickerTitle">Add a new color</string>
+    <string name="color">color</string>
+    <string name="textColorHeader">Text color</string>
+    <string name="textColorSelectionText">Select a color</string>
+    <string name="addNewColorText">ADD A NEW COLOR</string>
+    <string name="newColorAddedText">New color added!</string>
+    <string name="colorDeletedText">Color deleted</string>
+    <string name="defaultRemoveCancel">Can\'t remove a default color</string>
+    <string name="selectedRemoveCancel">Can\'t remove current selected color</string>
+    <string name="editColor">Edit color</string>
+    <string name="editColorNameText">Edit color name</string>
+    <string name="colorEditedText">Color edited</string>
+    <string name="helpCreateText2">Step 2 : Now add text and set all the attributes you want, like text color, font, etc. And click on the tick button to save</string>
+    <string name="grey" translatable="true">Gray</string>
+
+</resources>

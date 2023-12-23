@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name" translatable="false">Any Text Widget</string>
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+    <string name="add_widget" translatable="false">Add widget</string>
+    <string name="colorPickerTitle">Add a new colour</string>
+    <string name="colorPickerAddButton" translatable="false">Add</string>
+    <string name="color">colour</string>
+    <string name="textColorHeader">Text colour</string>
+    <string name="textColorSelectionText">Select a colour</string>
+    <string name="addNewColorText">ADD A NEW COLOUR</string>
+    <string name="newColorAddedText">New colour added!</string>
+    <string name="colorDeletedText">Colour deleted</string>
+    <string name="defaultRemoveCancel">Can\'t remove a default colour</string>
+    <string name="selectedRemoveCancel">Can\'t remove current selected colour</string>
+    <string name="editColor">Edit colour</string>
+    <string name="colorPickerEditButton" translatable="false">Edit</string>
+    <string name="editColorNameText">Edit colour name</string>
+    <string name="colorEditedText">Colour edited</string>
+    <string name="bannerAdTestID" translatable="false">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="bannerAd1UnitID" translatable="false">ca-app-pub-4804289087354371/3075220281</string>
+    <string name="bannerAdTwoID" translatable="false">ca-app-pub-4804289087354371/2894849356</string>
+    <string name="bannerAdThreeId" translatable="false">ca-app-pub-4804289087354371/5916548451</string>
+    <string name="bannerAdFourId" translatable="false">ca-app-pub-4804289087354371/6800757853</string>
+    <string name="bannerAdFiveId" translatable="false">ca-app-pub-4804289087354371/7399523658</string>
+    <string name="interstitialAdTestID" translatable="false">ca-app-pub-3940256099942544/1033173712</string>
+    <string name="interstitialAdOneID" translatable="false">ca-app-pub-4804289087354371/7221107171</string>
+    <string name="interstital2" translatable="false">ca-app-pub-4804289087354371/1907561811</string>
+
+    <string name="removeAdsDes" translatable="false">Remove ads completely all over the app and get a smooth experience</string>
+    <string name="getMoreFeaturesDes" translatable="false">Get access to upcoming exciting features added with continued updates</string>
+    <string name="supportMeDes" translatable="false">By getting the full version you can help me continue developing the app</string>
+    <string name="helpCreateText1" translatable="false">Step 1 : Open the app and click on the \'+\' button</string>
+    <string name="helpCreateText2">Step 2 : Now add text and set all the attributes you want, like text colour, font, etc. And click on the tick button to save</string>
+    <string name="helpCreateText3" translatable="false">Step 3 : After saving, your widget will be added to the main page and is ready to be used on your home screen</string>
+    <string name="helpPlaceText1" translatable="false">Step 1 : Long press on your home screen to get a popup menu, and click on the widgets option</string>
+    <string name="helpPlaceText2" translatable="false">Step 2 : Now long press on the \'widget\' placeholder and then drag it to anywhere on your home screen</string>
+    <string name="helpPlaceText3" translatable="false">Step 3 : After that, you will be prompted to select any of your saved widgets. Then, click on any of them and it will automatically get placed on your home screen. From there, you can resize it in anyway you want</string>
+    <string name="helpSaveText" translatable="false">Open the app and long press on any of your saved widgets to open the widgets options sheet. Then click on \'Save widget as file\' option and the widget will be saved to your device as a file. (Storage permission required!)</string>
+    <string name="helpImportText1" translatable="false">Step 1 : Open the app and click on the 3 dot button on the top right corner to open a popup menu. Then click on the \'Import widget\' option to select a file. Navigate to the path where your \'.atw\' file is located and select it</string>
+    <string name="helpImportText2" translatable="false">Step 2 : After selecting, you will be prompted with a sheet showing the selected widget file, then click on the \'Add widget\' button and the widget will be added to your saved widgets</string>
+    <string name="grey" translatable="true">Grey</string>
+    <string name="title_activity_empty_jetpack">EmptyJetpack</string>
+</resources>

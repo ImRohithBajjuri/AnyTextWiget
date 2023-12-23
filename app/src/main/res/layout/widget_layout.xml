@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:animateLayoutChanges="true">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        app:cardElevation="0dp"
+        app:cardCornerRadius="@dimen/cardCornerRadius"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="15dp"
+        android:id="@+id/widgetcard"
+        android:theme="@style/Theme.MaterialComponents.Light"
+        app:strokeWidth="0dp"
+        app:strokeColor="@color/Black"
+        android:transitionName="mainToPreview"
+        android:layout_weight="1"
+        android:animateLayoutChanges="true"
+        android:clipChildren="true"
+        >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/widgetGradientBgr"
+            android:visibility="gone"
+            />
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:animateLayoutChanges="true"
+            >
+
+
+            <AdapterViewFlipper
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/widgetBackgroundFlipper"
+                android:autoStart="true"
+                android:flipInterval="5000"
+                />
+
+
+            <TextView
+                android:id="@+id/widgetText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:fontFamily="@font/roboto_medium"
+                android:text="Widget text"
+                android:textColor="@color/Black"
+                android:textSize="21sp"
+               />
+        </FrameLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_round_format_align_justify_24"
+        android:id="@+id/sortHolder"
+        android:layout_gravity="center_vertical"
+        android:padding="10dp"
+        android:visibility="gone"/>
+</LinearLayout>

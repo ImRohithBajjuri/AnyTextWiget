@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".WidgetOptionsSheet"
+    android:orientation="vertical"
+    android:id="@+id/widgetOptionsSheetParent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="60dp"
+        android:clipToPadding="false">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="15dp"
+            android:fontFamily="@font/open_sans_bold"
+            android:text="Options"
+            android:textColor="@color/Black"
+            android:textSize="21sp"
+            android:id="@+id/widgetOptionsSheetHeader"/>
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Place widget on home screen"
+            android:drawablePadding="15dp"
+            android:textColor="@color/Black"
+            android:textSize="18sp"
+            android:padding="15dp"
+            android:fontFamily="@font/roboto_medium"
+            android:id="@+id/placeWidgetOption"
+            android:background="@drawable/rippleblack"
+            android:gravity="center_vertical"
+            android:visibility="gone"
+            app:drawableStartCompat="@drawable/ic_round_add_to_home_screen_24"
+          />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Share widget"
+            android:drawablePadding="15dp"
+            android:textColor="@color/Black"
+            android:textSize="18sp"
+            android:padding="15dp"
+            android:fontFamily="@font/roboto_medium"
+            android:id="@+id/sharewidgetoption"
+            android:background="@drawable/rippleblack"
+            android:gravity="center_vertical"
+            app:drawableStartCompat="@drawable/ic_baseline_share_30"
+             />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Save widget as file"
+            android:drawablePadding="15dp"
+            android:textColor="@color/Black"
+            android:textSize="18sp"
+            android:padding="15dp"
+            android:id="@+id/widgetsavetodeviceoption"
+            android:background="@drawable/rippleblack"
+            android:gravity="center_vertical"
+            android:fontFamily="@font/roboto_medium"
+            app:drawableStartCompat="@drawable/ic_round_save_alt_for_widget_options"
+             />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Save widget as image"
+            android:drawablePadding="15dp"
+            android:textColor="@color/Black"
+            android:textSize="18sp"
+            android:padding="15dp"
+            android:id="@+id/widgetSaveAsImage"
+            android:visibility="gone"
+            android:background="@drawable/rippleblack"
+            android:gravity="center_vertical"
+            android:fontFamily="@font/roboto_medium"
+            app:drawableStartCompat="@drawable/ic_outline_image_30"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Clone widget"
+            android:drawablePadding="15dp"
+            android:textColor="@color/Black"
+            android:textSize="18sp"
+            android:padding="15dp"
+            android:fontFamily="@font/roboto_medium"
+            android:id="@+id/cloneWidgetOption"
+            android:background="@drawable/rippleblack"
+            android:gravity="center_vertical"
+            app:drawableStartCompat="@drawable/ic_round_content_copy"
+            />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Delete widget"
+            android:drawablePadding="15dp"
+            android:textColor="@color/Black"
+            android:textSize="18sp"
+            android:padding="15dp"
+            android:id="@+id/widgetdeleteoption"
+            android:background="@drawable/rippleblack"
+            android:gravity="center_vertical"
+            android:fontFamily="@font/roboto_medium"
+            app:drawableStartCompat="@drawable/ic_round_delete_24"
+             />
+
+
+    </LinearLayout>
+
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/bannerad8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|bottom"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/bannerAdFiveId"
+        android:visibility="visible">
+    </com.google.android.gms.ads.AdView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

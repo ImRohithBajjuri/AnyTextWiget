@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".NewReleasesSheet"
+    android:orientation="vertical"
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="15dp"
+        android:fontFamily="@font/open_sans_bold"
+        android:text="What's new"
+        android:textColor="@color/Black"
+        android:textSize="21sp"
+        android:id="@+id/whatsNewHeader"/>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="20dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textColor="@color/Black"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="10dp"
+                android:id="@+id/whatsNewTitleOne"
+                android:text="New fonts"
+                android:fontFamily="@font/roboto_medium"
+                android:visibility="visible"/>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                app:cardElevation="0dp"
+                app:cardCornerRadius="@dimen/cardCornerRadius"
+                android:id="@+id/whatsNewCardOne"
+                app:cardBackgroundColor="@color/LightGrey4"
+                android:visibility="visible">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:textColor="@color/Black"
+                    android:layout_margin="10dp"
+                    android:id="@+id/whatsNewTextOne"
+                    android:fontFamily="@font/roboto"
+                    android:text="Customize your texts even more with 70+ new fonts covering A to Z!"/>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textColor="@color/Black"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="10dp"
+                android:id="@+id/whatsNewTitleTwo"
+                android:visibility="gone"
+                android:fontFamily="@font/roboto_medium"
+                android:text="Turn widgets into video"/>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="5dp"
+                app:cardElevation="0dp"
+                app:cardCornerRadius="@dimen/cardCornerRadius"
+                android:layout_marginBottom="10dp"
+                android:id="@+id/whatsNewCardTwo"
+                app:cardBackgroundColor="@color/white"
+                android:visibility="gone">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:textColor="@color/Black"
+                        android:layout_margin="10dp"
+                        android:id="@+id/whatsNewTextTwo"
+                        android:fontFamily="@font/roboto"
+                        android:text="Create a looping video of your widgets as an mp4 file. Just click on the 3 dot menu in main page and select 'Loop widgets into video'"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/LightGrey"
+                        android:id="@+id/whatsNewDivTwo"
+                        android:visibility="visible"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:text="Adding audio to the looped video will be added in the next update."
+                        android:textColor="@color/Black"
+                        android:layout_margin="10dp"
+                        android:id="@+id/whatsNewTextTwoSubOne"
+                        android:fontFamily="@font/roboto"/>
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textColor="@color/Black"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="10dp"
+                android:id="@+id/whatsNewTitleThree"
+                android:visibility="visible"
+                android:fontFamily="@font/roboto_medium"
+                android:text="Material you"
+                />
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="5dp"
+                app:cardElevation="0dp"
+                app:cardCornerRadius="@dimen/cardCornerRadius"
+                android:id="@+id/whatsNewCardThree"
+                app:cardBackgroundColor="@color/white"
+                android:visibility="visible">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:textColor="@color/Black"
+                    android:layout_margin="10dp"
+                    android:id="@+id/whatsNewTextThree"
+                    android:fontFamily="@font/roboto"/>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textColor="@color/Black"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="10dp"
+                android:id="@+id/whatsNewTitleFour"
+                android:visibility="visible"
+                android:fontFamily="@font/roboto_medium"
+                android:text="New Gradients"/>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="5dp"
+                app:cardElevation="0dp"
+                app:cardCornerRadius="@dimen/cardCornerRadius"
+                android:visibility="visible"
+                android:id="@+id/whatsNewCardFour"
+                app:cardBackgroundColor="@color/white">
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical">
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:textSize="18sp"
+                       android:textColor="@color/Black"
+                       android:layout_margin="10dp"
+                       android:id="@+id/whatsNewTextFourSubOne"
+                       android:fontFamily="@font/roboto"
+                       android:text="This update brings 10 new beautiful gradients that include new pastels!"/>
+                   <View
+                       android:layout_width="match_parent"
+                       android:layout_height="1dp"
+                       android:background="@color/LightGrey"
+                       android:id="@+id/whatsNewDivFour"
+                       android:visibility="gone"/>
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:textSize="18sp"
+                       android:textColor="@color/Black"
+                       android:layout_margin="10dp"
+                       android:id="@+id/whatsNewTextFourSubTwo"
+                       android:fontFamily="@font/roboto"
+                       android:linksClickable="false"
+                       android:autoLink="web"
+                       android:textColorLink="@color/bluelight"
+                       android:visibility="gone"
+                       />
+               </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textColor="@color/Black"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="10dp"
+                android:id="@+id/whatsNewTitleFive"
+                android:visibility="visible"
+                android:fontFamily="@font/roboto_medium"
+                android:text="Bug fixes"/>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                app:cardElevation="0dp"
+                app:cardCornerRadius="@dimen/cardCornerRadius"
+                android:id="@+id/whatsNewCardFive"
+                android:visibility="visible"
+                app:cardBackgroundColor="@color/white">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:textColor="@color/Black"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:id="@+id/whatsNewTextFiveSubOne"
+                        android:fontFamily="@font/roboto"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/LightGrey"
+                        android:id="@+id/whatsNewDivFiveSubOne"
+                        android:visibility="gone"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:textColor="@color/Black"
+                        android:layout_margin="10dp"
+                        android:id="@+id/whatsNewTextFiveSubTwo"
+                        android:fontFamily="@font/roboto"
+                        android:text="Note : Next update will completely change the UI/UX of Any Text Widget as it goes through a major revamp."
+                        android:visibility="visible"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/LightGrey"
+                        android:id="@+id/whatsNewDivFiveSubTwo"
+                        android:visibility="gone"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:textColor="@color/Black"
+                        android:layout_margin="10dp"
+                        android:id="@+id/whatsNewTextFiveSubThree"
+                        android:fontFamily="@font/roboto"
+                        android:text="For this reason, next update will take significant amount of time to release. So please consider supporting the app through 'support the app' in settings. Thank you and stay tuned!"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="@color/Grey"
+                android:layout_margin="20dp"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/roboto"
+                android:visibility="visible"
+                android:text="More features and bug fixes coming in future updates. Please stay tuned! Your support is highly appreciated."
+                android:id="@+id/whatsNewStayTunedText"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

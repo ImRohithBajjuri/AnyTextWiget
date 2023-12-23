@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"
+    android:initialKeyguardLayout="@layout/your_widget"
+    android:initialLayout="@layout/your_widget"
+    android:minWidth="100dp"
+    android:minHeight="50dp"
+    android:previewImage="@drawable/widget_preview"
+    android:resizeMode="horizontal|vertical"
+    android:updatePeriodMillis="1000000000"
+    android:widgetCategory="home_screen|keyguard"
+    android:configure="com.rb.anytextwiget.ShowSavedWidgets"
+    >
+</appwidget-provider>

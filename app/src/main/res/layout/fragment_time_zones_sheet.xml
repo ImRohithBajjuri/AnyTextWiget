@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".TimeZonesSheet"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="15dp"
+        android:fontFamily="@font/open_sans_bold"
+        android:text="Time Zones"
+        android:textColor="@color/Black"
+        android:textSize="21sp"
+        android:id="@+id/timeZonesSheetHeader"/>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:strokeWidth="0dp"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="0dp"
+        app:cardBackgroundColor="@color/white"
+        android:id="@+id/timeZonesSheetSearchCard"
+        android:layout_margin="10dp">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/Black"
+            android:textSize="18sp"
+            android:background="@android:color/transparent"
+            android:padding="15dp"
+            android:id="@+id/timeZonesSheetSearch"
+            android:maxLines="1"
+            android:maxLength="50"
+            android:inputType="textFilter"
+            android:textColorHint="@color/Grey"
+            android:hint="Search your timezone here"
+            />
+    </com.google.android.material.card.MaterialCardView>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/timeZonesSheetRecy"/>
+</androidx.appcompat.widget.LinearLayoutCompat>

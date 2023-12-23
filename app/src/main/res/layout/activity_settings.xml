@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SettingsActivity"
+    android:orientation="vertical"
+    android:background="@color/LightGrey3"
+    android:id="@+id/settingsParent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/settingsAppBarLayout">
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title="Settings"
+            app:titleTextColor="@color/white"
+            app:navigationIcon="@drawable/ic_round_chevron_left_24"
+            android:id="@+id/settingstoolbar"
+            android:background="@color/colorPrimary"/>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/settingsAppBarLayout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:scrollbars="none"
+        android:paddingBottom="60dp"
+        android:clipToPadding="false">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/uioptionstitle"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/open_sans_semibold"
+                android:text="UI options"
+                android:textColor="@color/Grey2"
+                android:textSize="@dimen/subHeaderSize"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="@dimen/cardCornerRadius"
+                app:cardElevation="0dp"
+                android:id="@+id/appUIOptionscard">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:id="@+id/appRoundCornersSwitchLayout">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_round_rounded_corner_24"
+                            android:layout_margin="10dp"
+                            android:layout_gravity="center_vertical"
+                            android:id="@+id/appRoundCornersSwitchImage"
+                            app:tint="@color/colorPrimary" />
+
+                        <androidx.appcompat.widget.SwitchCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Enable rounded corners in the app"
+                            android:textColor="@color/Black"
+                            android:textSize="18sp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginEnd="15dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:checked="true"
+                            android:id="@+id/approundcornersswitch"
+                            />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="wrap_content"
+                        android:layout_height="1dp"
+                        android:background="@color/LightGrey3"
+                        android:id="@+id/settingsDiv1"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:id="@+id/disableAdsSwitchLayout">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_baseline_do_disturb_alt_50"
+                            android:layout_margin="10dp"
+                            android:layout_gravity="center_vertical"
+                            android:id="@+id/disableAdsSwitchImage"
+                            app:tint="@color/colorPrimary" />
+
+                        <androidx.appcompat.widget.SwitchCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Disable Ads"
+                            android:textColor="@color/Black"
+                            android:textSize="18sp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginEnd="15dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:checked="true"
+                            android:id="@+id/disableAdsSwitch"
+                            />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="wrap_content"
+                        android:layout_height="1dp"
+                        android:background="@color/LightGrey3"
+                        android:id="@+id/settingsDiv2"/>
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:id="@+id/appThemePrefLayout">
+                        <ImageView
+                            android:id="@+id/appThemePrefImage"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="10dp"
+                            android:src="@drawable/ic_round_light_mode_24"
+                            />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:orientation="vertical"
+                            android:layout_gravity="center_vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="5dp"
+                                android:fontFamily="@font/roboto"
+                                android:text="App theme"
+                                android:textColor="@color/Black"
+                                android:textSize="18sp"
+                                android:id="@+id/appThemePrefTitle"/>
+
+                            <TextView
+                                android:id="@+id/appThemeSelectedPref"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto"
+                                android:text="Light"
+                                android:textSize="16sp"
+                                android:textColor="@color/Grey"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="0dp"
+                app:cardCornerRadius="@dimen/cardCornerRadius"
+                app:cardBackgroundColor="@color/purpleLight2"
+                android:layout_margin="10dp"
+                android:id="@+id/settingWatchAdButton"
+
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="support app by watching an ad"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_margin="10dp"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/open_sans_semibold"
+
+                    />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/abouttitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="@dimen/sunHeaderMarginTop"
+                android:fontFamily="@font/open_sans_semibold"
+                android:text="About"
+                android:textColor="@color/Grey2"
+                android:textSize="@dimen/subHeaderSize"
+                />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="@dimen/cardCornerRadius"
+                app:cardElevation="0dp"
+                android:id="@+id/aboutcard"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Try Crafty!"
+                        android:drawableStart="@drawable/crafty_icon_mono"
+                        android:drawablePadding="15dp"
+                        android:textColor="@color/Black"
+                        android:textSize="18sp"
+                        android:padding="15dp"
+                        android:id="@+id/aboutCrafty"
+                        android:background="@drawable/rippleblack"
+                        android:gravity="center_vertical"
+                        />
+
+                    <View
+                        android:layout_width="wrap_content"
+                        android:layout_height="1dp"
+                        android:background="@color/LightGrey3"
+                        android:id="@+id/settingsDiv12"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Support the app"
+                        android:drawableStart="@drawable/ic_round_favorite_30"
+                        android:drawablePadding="15dp"
+                        android:textColor="@color/Black"
+                        android:textSize="18sp"
+                        android:padding="15dp"
+                        android:id="@+id/aboutSupport"
+                        android:background="@drawable/rippleblack"
+                        android:gravity="center_vertical"
+                        />
+
+                    <View
+                        android:layout_width="wrap_content"
+                        android:layout_height="1dp"
+                        android:background="@color/LightGrey3"
+                        android:id="@+id/settingsDiv3"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Rate the app"
+                        android:drawableStart="@drawable/ic_round_star_rate_24"
+                        android:drawablePadding="15dp"
+                        android:textColor="@color/Black"
+                        android:textSize="18sp"
+                        android:padding="15dp"
+                        android:id="@+id/aboutRate"
+                        android:background="@drawable/rippleblack"
+                        android:gravity="center_vertical"
+                        />
+
+                    <View
+                        android:layout_width="wrap_content"
+                        android:layout_height="1dp"
+                        android:background="@color/LightGrey3"
+                        android:id="@+id/settingsDiv4"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="What's new"
+                        android:drawableStart="@drawable/ic_round_whatshot_30"
+                        android:drawablePadding="15dp"
+                        android:textColor="@color/Black"
+                        android:textSize="18sp"
+                        android:padding="15dp"
+                        android:id="@+id/aboutWhatsNew"
+                        android:background="@drawable/rippleblack"
+                        android:gravity="center_vertical"
+                        />
+
+                    <View
+                        android:layout_width="wrap_content"
+                        android:layout_height="1dp"
+                        android:background="@color/LightGrey3"
+                        android:id="@+id/settingsDiv10"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Join telegram channel"
+                        android:drawableStart="@drawable/ic_telegram_icon"
+                        android:drawablePadding="15dp"
+                        android:textColor="@color/Black"
+                        android:textSize="18sp"
+                        android:padding="15dp"
+                        android:id="@+id/aboutTg"
+                        android:background="@drawable/rippleblack"
+                        android:gravity="center_vertical"
+                        />
+
+
+                    <View
+                        android:layout_width="wrap_content"
+                        android:layout_height="1dp"
+                        android:background="@color/LightGrey3"
+                        android:id="@+id/settingsDiv9"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Feedback"
+                        android:drawableStart="@drawable/ic_round_feedback_24"
+                        android:drawablePadding="15dp"
+                        android:textColor="@color/Black"
+                        android:textSize="18sp"
+                        android:padding="15dp"
+                        android:id="@+id/aboutfeedback"
+                        android:background="@drawable/rippleblack"
+                        android:gravity="center_vertical"
+                        />
+
+                    <View
+                        android:layout_width="wrap_content"
+                        android:layout_height="1dp"
+                        android:background="@color/LightGrey3"
+                        android:id="@+id/settingsDiv5"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Share"
+                        android:drawableStart="@drawable/ic_baseline_share_30"
+                        android:drawablePadding="15dp"
+                        android:textColor="@color/Black"
+                        android:textSize="18sp"
+                        android:padding="15dp"
+                        android:id="@+id/aboutshare"
+                        android:background="@drawable/rippleblack"
+                        android:gravity="center_vertical"
+                        />
+
+                    <View
+                        android:layout_width="wrap_content"
+                        android:layout_height="1dp"
+                        android:background="@color/LightGrey3"
+                        android:id="@+id/settingsDiv6"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Open source libraries"
+                        android:drawableStart="@drawable/ic_round_article_24"
+                        android:drawablePadding="15dp"
+                        android:textColor="@color/Black"
+                        android:textSize="18sp"
+                        android:padding="15dp"
+                        android:id="@+id/aboutoss"
+                        android:background="@drawable/rippleblack"
+                        android:gravity="center_vertical"
+                        />
+
+
+                    <View
+                        android:layout_width="wrap_content"
+                        android:layout_height="1dp"
+                        android:background="@color/LightGrey3"
+                        android:id="@+id/settingsDiv7"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Terms of service"
+                        android:drawableStart="@drawable/ic_round_assignment_24"
+                        android:drawablePadding="15dp"
+                        android:textColor="@color/Black"
+                        android:textSize="18sp"
+                        android:padding="15dp"
+                        android:id="@+id/abouttos"
+                        android:background="@drawable/rippleblack"
+                        android:gravity="center_vertical"
+                        />
+
+                    <View
+                        android:layout_width="wrap_content"
+                        android:layout_height="1dp"
+                        android:background="@color/LightGrey3"
+                        android:id="@+id/settingsDiv8"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Privacy policy"
+                        android:drawableStart="@drawable/ic_round_privacy_tip_24"
+                        android:drawablePadding="15dp"
+                        android:textColor="@color/Black"
+                        android:textSize="18sp"
+                        android:padding="15dp"
+                        android:id="@+id/aboutprivacy"
+                        android:background="@drawable/rippleblack"
+                        android:gravity="center_vertical"
+                        />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/bannerAdTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/bannerAdTwoID"
+        android:visibility="visible"
+        ads:layout_constraintBottom_toBottomOf="parent"
+        ads:layout_constraintEnd_toEndOf="parent"
+        ads:layout_constraintStart_toStartOf="parent">
+    </com.google.android.gms.ads.AdView>
+</androidx.constraintlayout.widget.ConstraintLayout>

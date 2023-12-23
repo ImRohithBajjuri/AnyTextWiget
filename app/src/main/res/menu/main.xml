@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:title="Import widget"
+        android:id="@+id/importwidget"
+        >
+    </item>
+
+    <item
+        android:title="Export all widgets"
+        android:id="@+id/saveAll"
+        >
+    </item>
+
+    <item
+        android:title="Loop your widgets into a video"
+        android:id="@+id/loopVideo"
+        android:visible="false"
+        >
+    </item>
+
+    <item
+        android:title="Sort"
+        android:id="@+id/sort"
+        >
+    </item>
+
+    <item
+        android:title="Refresh "
+        android:id="@+id/refresh"
+        >
+    </item>
+
+    <item
+        android:title="Settings"
+        android:id="@+id/settings"
+        >
+    </item>
+
+
+    <item
+        android:title="Help"
+        android:id="@+id/help"
+       >
+    </item>
+</menu>

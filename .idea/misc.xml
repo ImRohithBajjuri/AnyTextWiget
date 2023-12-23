@@ -1,0 +1,208 @@
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Android projects/AnyTextWiget/app/src/main/res/drawable/ic_round_cancel_24.xml" value="0.166015625" />
+        <entry key="..\:/Android projects/AnyTextWiget/app/src/main/res/drawable/ic_round_cancel_30.xml" value="0.166015625" />
+        <entry key="..\:/Android projects/AnyTextWiget/app/src/main/res/drawable/ic_round_wifi.xml" value="0.165234375" />
+        <entry key="..\:/Android projects/AnyTextWiget/app/src/main/res/layout/activity_create_widget.xml" value="0.15208333333333332" />
+        <entry key="..\:/Android projects/AnyTextWiget/app/src/main/res/layout/activity_main.xml" value="0.15" />
+        <entry key="..\:/Android projects/AnyTextWiget/app/src/main/res/layout/activity_settings.xml" value="0.15" />
+        <entry key="..\:/Android projects/AnyTextWiget/app/src/main/res/layout/fragment_action_selection_sheet.xml" value="0.15" />
+        <entry key="..\:/Android projects/AnyTextWiget/app/src/main/res/layout/multi_text_item.xml" value="0.15390625" />
+        <entry key="..\:/Android projects/AnyTextWiget/app/src/main/res/layout/multi_text_preview_item.xml" value="0.15390625" />
+        <entry key="..\:/Android projects/AnyTextWiget/app/src/main/res/layout/widget_layout.xml" value="0.14903474903474903" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/bottom_sheet_shape_dark.xml" value="0.1" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/bottomsheetshape.xml" value="0.1" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/circle_color_background.xml" value="0.18055555555555555" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/color_item_image_background.xml" value="0.18055555555555555" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/font_item_img_background.xml" value="0.18055555555555555" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/gradient_black_white.xml" value="0.1" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/gradient_blue_hue.xml" value="0.1" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/gradient_blue_purple.xml" value="0.1" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/gradient_blue_white.xml" value="0.1" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/gradient_brown_black.xml" value="0.1" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/gradient_cyan_pink.xml" value="0.1" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/gradient_gray_black.xml" value="0.1" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/gradient_greeen_white.xml" value="0.1" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/gradient_green_hue.xml" value="0.1" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/gradient_green_white.xml" value="0.1" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/gradient_grey_hue.xml" value="0.1" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/gradient_indigo_yellow.xml" value="0.1" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/gradient_lime_blue.xml" value="0.1" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/gradient_orange_green.xml" value="0.1" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/gradient_orange_red.xml" value="0.1" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/gradient_pink_purple.xml" value="0.1" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/gradient_pink_red.xml" value="0.1" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/gradient_pink_white.xml" value="0.1" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/gradient_purple_green.xml" value="0.1" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/gradient_purple_hue.xml" value="0.1" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/gradient_purple_red.xml" value="0.1" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/gradient_purple_yellow.xml" value="0.1" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/gradient_red_hue.xml" value="0.1" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/gradient_red_white.xml" value="0.1" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/gradient_teal_blue.xml" value="0.1" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/gradient_teal_pink.xml" value="0.1" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/gradient_teal_purple.xml" value="0.1" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/gradient_yellow_black.xml" value="0.1" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/gradient_yellow_blue.xml" value="0.1" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/gradient_yellow_brown.xml" value="0.1" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/gradient_yellow_red.xml" value="0.1" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/ic_baseline_share_30.xml" value="0.21614583333333334" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/ic_outline_image_30.xml" value="0.1" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/ic_outline_image_dark_30.xml" value="0.147" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/ic_round_add_circle_24.xml" value="0.14" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/ic_round_add_to_home_screen_24.xml" value="0.14" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/ic_round_add_to_home_screen_dark.xml" value="0.14" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/ic_round_article_24.xml" value="0.14" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/ic_round_article_dark_mode.xml" value="0.14" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/ic_round_assignment_24.xml" value="0.14" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/ic_round_assignment_dark_mode.xml" value="0.14" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/ic_round_coffee_50.xml" value="0.1" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/ic_round_coffee_dark_50.xml" value="0.147" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/ic_round_content_copy.xml" value="0.21614583333333334" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/ic_round_content_copy_dark.xml" value="0.14" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/ic_round_dark_mode_24.xml" value="0.14" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/ic_round_delete_24.xml" value="0.1" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/ic_round_delete_dark.xml" value="0.14" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/ic_round_fastfood_50.xml" value="0.1" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/ic_round_fastfood_dark_50.xml" value="0.147" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/ic_round_favorite_30.xml" value="0.1537037037037037" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/ic_round_favorite_dark_30.xml" value="0.14" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/ic_round_feedback_24.xml" value="0.14" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/ic_round_feedback_dark_mode.xml" value="0.14" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/ic_round_format_size_24.xml" value="0.123" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/ic_round_lens_24.xml" value="0.123" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/ic_round_light_mode_24.xml" value="0.14" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/ic_round_local_bar_50.xml" value="0.1" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/ic_round_local_bar_dark_50.xml" value="0.147" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/ic_round_open_in_browser_35.xml" value="0.147" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/ic_round_privacy_tip_24.xml" value="0.14" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/ic_round_privacy_tip_dark_mode.xml" value="0.14" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/ic_round_save_alt_dark.xml" value="0.14" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/ic_round_save_alt_for_widget_options.xml" value="0.14" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/ic_round_share_dark_mode.xml" value="0.14" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/ic_round_star_rate_24.xml" value="0.14" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/ic_round_star_rate_dark.xml" value="0.14" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/ic_round_tv_50.xml" value="0.1" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/ic_round_tv_dark_50.xml" value="0.147" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/ic_round_whatshot_24.xml" value="0.1537037037037037" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/ic_round_whatshot_30.xml" value="0.15185185185185185" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/ic_round_whatshot_dark.xml" value="0.14" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/ic_round_wifi_50.xml" value="0.123" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/ic_telegram_icon.xml" value="0.14" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/ic_telegram_icon_dark.xml" value="0.14" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/no_corners_bottom_sheet_shape_dark.xml" value="0.1" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/no_corners_bottomsheetshape.xml" value="0.1" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/no_corners_gradient_black_white.xml" value="0.1" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/no_corners_gradient_blue_hue.xml" value="0.1" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/no_corners_gradient_blue_purple.xml" value="0.1" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/no_corners_gradient_brown_black.xml" value="0.1" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/no_corners_gradient_cyan_pink.xml" value="0.1" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/no_corners_gradient_gray_black.xml" value="0.1" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/no_corners_gradient_green_hue.xml" value="0.1" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/no_corners_gradient_green_white.xml" value="0.1" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/no_corners_gradient_grey_hue.xml" value="0.1" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/no_corners_gradient_indigo_yellow.xml" value="0.1" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/no_corners_gradient_lime_blue.xml" value="0.1" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/no_corners_gradient_orange_green.xml" value="0.1" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/no_corners_gradient_orange_red.xml" value="0.1" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/no_corners_gradient_pink_purple.xml" value="0.1" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/no_corners_gradient_pink_red.xml" value="0.1" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/no_corners_gradient_pink_white.xml" value="0.1" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/no_corners_gradient_purple_green.xml" value="0.1" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/no_corners_gradient_purple_hue.xml" value="0.1" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/no_corners_gradient_purple_red.xml" value="0.1" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/no_corners_gradient_purple_yellow.xml" value="0.1" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/no_corners_gradient_red_hue.xml" value="0.1" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/no_corners_gradient_red_white.xml" value="0.1" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/no_corners_gradient_teal_blue.xml" value="0.1" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/no_corners_gradient_teal_pink.xml" value="0.1" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/no_corners_gradient_teal_purple.xml" value="0.1" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/no_corners_gradient_yellow_black.xml" value="0.1" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/no_corners_gradient_yellow_blue.xml" value="0.1" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/no_corners_gradient_yellow_brown.xml" value="0.1" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/no_corners_gradient_yellow_red.xml" value="0.1" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/no_corners_green_hue.xml" value="0.1" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/no_corners_grey_hue.xml" value="0.1" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/no_corners_outline_background.xml" value="0.1" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/no_corners_outline_background_10dp.xml" value="0.1" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/no_corners_outline_background_1dp.xml" value="0.1" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/no_corners_outline_background_2dp.xml" value="0.1" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/no_corners_outline_background_3dp.xml" value="0.1" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/no_corners_outline_background_4dp.xml" value="0.1" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/no_corners_outline_background_5dp.xml" value="0.1" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/no_corners_outline_background_6dp.xml" value="0.1" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/no_corners_outline_background_7dp.xml" value="0.1" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/no_corners_outline_background_8dp.xml" value="0.1" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/no_corners_outline_background_9dp.xml" value="0.1" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/no_corners_yellow_blue.xml" value="0.1" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/outline_backgound_4dp.xml" value="0.1" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/outline_background.xml" value="0.1" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/outline_background_10dp.xml" value="0.1" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/outline_background_1dp.xml" value="0.1" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/outline_background_2dp.xml" value="0.1" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/outline_background_3dp.xml" value="0.1" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/outline_background_4dp.xml" value="0.1" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/outline_background_5dp.xml" value="0.1" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/outline_background_6dp.xml" value="0.1" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/outline_background_7dp.xml" value="0.1" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/outline_background_8dp.xml" value="0.1" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/outline_background_9dp.xml" value="0.1" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/outline_icon_50.xml" value="0.1" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/rippleblack.xml" value="0.1" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/selection_background.xml" value="0.147" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/snackbar_background.xml" value="0.1" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/teal_purple.xml" value="0.1" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/test_back.xml" value="0.1" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/test_drawable.xml" value="0.1" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/testy.xml" value="0.33" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/testy2.xml" value="0.14907407407407408" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/transparent_background.xml" value="0.1" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/transparent_outline_background.xml" value="0.1" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/widget_background_selection_back.xml" value="0.1" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/widget_circle_background.xml" value="0.18055555555555555" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/widget_color_background_back.xml" value="0.1" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/drawable/widget_round_background.xml" value="0.21614583333333334" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/font/cairo.xml" value="0.17777777777777778" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/font/cairo_light.xml" value="0.17777777777777778" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/font/lemonada_light.xml" value="0.17777777777777778" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/font/martel_sans.xml" value="0.17777777777777778" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/layout/activity_create_widget.xml" value="0.22" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/layout/activity_main.xml" value="0.18" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/layout/activity_settings.xml" value="0.21" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/layout/add_name_layout.xml" value="0.2" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/layout/app_action_item.xml" value="0.2" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/layout/color_item.xml" value="0.13518518518518519" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/layout/font_item.xml" value="0.2" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/layout/fragment_action_selection_sheet.xml" value="0.2" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/layout/fragment_add_widget_dialog.xml" value="0.2" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/layout/fragment_app_theme_selection_sheet.xml" value="0.2" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/layout/fragment_color_selection_sheet.xml" value="0.2" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/layout/fragment_font_selection_sheet.xml" value="0.1259259259259259" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/layout/fragment_get_full_version_sheet.xml" value="0.2" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/layout/fragment_gradients_sheet.xml" value="0.2" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/layout/fragment_help_sheet.xml" value="0.2" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/layout/fragment_new_releases_sheet.xml" value="0.2" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/layout/fragment_support_app_options_sheet.xml" value="0.2" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/layout/fragment_text_gravity_selection_sheet.xml" value="0.1259259259259259" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/layout/fragment_widget_options_sheet.xml" value="0.2" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/layout/gradient_item.xml" value="0.25" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/layout/layout_test.xml" value="0.2" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/layout/multi_image_item.xml" value="0.2" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/layout/multi_text_display_item.xml" value="0.2" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/layout/multi_text_item.xml" value="0.2" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/layout/multi_text_preview_item.xml" value="0.2" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/layout/widget_layout.xml" value="0.2" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/layout/your_widget.xml" value="0.1" />
+        <entry key="..\:/AnyTextWiget/app/src/main/res/menu/main.xml" value="0.2" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="jbr-17" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
